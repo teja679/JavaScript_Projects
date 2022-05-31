@@ -1,0 +1,41 @@
+
+h1, h3{
+    text-align: center;
+}
+h1{
+    font-size: 3.5em;
+    color: #111;
+    background-color: #fff;
+    width: 300px;
+    margin: 25px auto;
+}
+.row{
+    font-family: 'Permanent Marker';
+    display: flex;
+    height: 630px;
+    width: 630px;
+    flex-wrap: wrap;
+    margin: auto;
+    border-top-color: #21B6A8;
+}
+h3{
+    background-color: antiquewhite;
+    width: 120px;
+    margin: 10px auto;
+}
+#current-turn-text{
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    font-size: 1.4em;
+    margin: 10px auto;
+    text-align: center;
+}
+.col{
+    /* display: flex; */
+    width: 200px;
+    height: 200px;
+    background-color: #21B6A8;
+    border: 5px solid #fff;
+    font-size: 8em;
+    text-align: center;
+}
