@@ -11,7 +11,7 @@ body{
     #display{
       text-align: right;
       height: 70px;
-      background-color: rgb(39, 77, 88);
+      background-color: rgba(7, 38, 59, 0.897);
       color: rgb(240, 243, 247);
       border-radius: 5px;
       line-height: 70px;
@@ -30,7 +30,7 @@ body{
       border: 0.5px solid #999;
       border-radius: 5px;
       color: aliceblue;
-      background-color: rgba(4, 22, 34, 0.897);
+      background-color: rgba(7, 38, 59, 0.897);
       line-height: 100px;
       text-align: center;
       font-size: 25px;
@@ -43,7 +43,13 @@ body{
     }
     
     .button:hover{
-      background-color: #323330;
+      background-color: #282928;
       color: white;
       transition: 0.5s ease-in-out;
+    }
+    .operator2{
+      background-color: rgb(39, 77, 88);
+    }
+    .operator1{
+      background-color: rgb(236, 126, 35);
     }
