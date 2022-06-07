@@ -10,26 +10,12 @@ const createToDo = () => {
         hour : 'numeric',
         minute : 'numeric'
     })
-    console.log(todoInput)
-    console.log(todoPriorityInput)
-    console.log(todoDeadline)
-    if(todoInput === '' || todoDeadline.length < 20)
-        alert('Enter valid details')
-    else
-        createToDoDiv(todoInput, todoPriorityInput, todoDeadline)
+    createToDoDiv(todoInput, todoPriorityInput, todoDeadline)
 }
 
-    const abc = () => {
-        console.log("abc")
-    }
-    const abc2 = () => {
-        console.log("abc2")
-    }
 
-    const allowdrop = (event) => {
-        // event.preventDefault()
-        console.log("logged")
-    }
+    
+
 /* Draggable Elements --
     [draggable = "true"]
     1. ondragstart
@@ -40,5 +26,5 @@ const createToDo = () => {
     2. ondrop
 */
 
-// draggable="true" ondragstart="abc()" ondrag="abc2()"
+// draggable="true" ondragstart="toDoDragStart(event)"
 // ondragover="allowdrop()"

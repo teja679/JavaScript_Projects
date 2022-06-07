@@ -17,17 +17,17 @@
 		</div>
 		<div class="row outer">
 			<div class="col-md-4 col-xs-12">
-				<div class="todo-section" id="to-do-block">
+				<div class="todo-section" id="to-do-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
 					<h1 class="display-4">To-Do</h1>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12">
-				<div class="todo-section" id="in-progress-block">
+				<div class="todo-section" id="in-progress-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)"">
 					<h1 class="display-4">In-Progress</h1>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12">
-				<div class="todo-section" id="completed-block">
+				<div class="todo-section" id="completed-block" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
 					<h1 class="display-4">Completed</h1>
 				</div>
 			</div>
@@ -41,14 +41,8 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<input class="form-control form-control-lg" type="text" placeholder="Enter the task" aria-label=".form-control-lg example-1" id="todo-input">
-					<!-- <div class="valid-feedback" id="taskValid">
-            Looks good!
-          </div> -->
-          <!-- <div class="invalid-feedback" id="taskInvalid">
-            Please enter a valid task.
-          </div> -->
-          <select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example" id="todo-priority-input">
+					<input class="form-control form-control-lg" type="text" placeholder="Enter the task" aria-label=".form-control-lg example-1" id="todo-input"> 
+          			<select class="form-select form-select-lg mt-3" aria-label=".form-select-lg example" id="todo-priority-input">
 						<option value="High">High</option>
 						<option selected value="Medium">Medium</option>
 						<option value="Low">Low</option>
