@@ -1,0 +1,47 @@
+body{
+    background: linear-gradient(50deg, rgba(191,3,3,0.9836309523809523) 31%, rgba(245,118,118,0.9752275910364145) 87%);}
+.main-header.jumbotron{
+    text-align: center;
+    background: #fceadb;
+
+}
+.btn-primary{
+    background: linear-gradient(50deg, rgba(191,3,3,0.9836309523809523) 31%, rgba(245,118,118,0.9752275910364145) 87%);}
+.navbar{
+    /* background-color: #fbe5d6; */
+    background: #fceadb;
+}
+.navbar-brand img{
+    border-radius: 10px;
+    margin-right: 2px;
+}
+#img1{
+    border-radius: 100%;
+    height: 300px;
+    border: 0 0 10px auto;
+}
+
+.card.product {
+    margin: 10px 0;
+}
+
+.card.product .card-img-top{
+    height: 300px;
+}
+.card.product .btn-outer{
+    display: flex;
+    justify-content: space-between;
+}
+.card.product .btn-outer .btn{
+    width: 48%;
+}
+.card.product .product-header{
+    display: flex;
+    justify-content: space-between;
+}
+.fa-star.checked{
+    color: orange;
+}
+.card-title.product-price{
+    color: green;
+}

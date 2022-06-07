@@ -1,3 +1,6 @@
+body{
+	background-image: url(https://previews.123rf.com/images/lisaalisaill/lisaalisaill1810/lisaalisaill181000014/114356186-colored-back-to-school-pattern-with-school-elements-and-supplies-welcome-back-to-school-seamless-bac.jpg);
+}
 .container {
 	padding: 0;
   margin: 20px auto;
@@ -15,11 +18,12 @@
 	border: 2px solid black;
 	height: 100%;
 	margin: 10px;
+	background-color: #fff;
 }
 
 .todo-section .display-4 {
 	text-align: center;
-	background-color: bisque;
+	background-color: rgb(63, 207, 195);
 	padding: 5px 0;
 }
 
