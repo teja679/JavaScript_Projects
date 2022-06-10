@@ -1,7 +1,6 @@
 const todoBlock = document.getElementById('to-do-block')
 
 let idCount = 1
-let slNoCount = 1
 
 const toDoDragStart = (event) => {
 	let toDoCardIdBeingDragged =  event.target.id
@@ -27,14 +26,14 @@ const createToDoDiv = (todoInput, todoPriorityInput, todoDeadline) => {
 	const cardBodyDiv = document.createElement('div')
 	const cardTitleH5 = document.createElement('h5')
 	const deleteButton = document.createElement('a')
-	const serialNo = document.createElement('span')
+	// const serialNo = document.createElement('span')
 
 	todoCardDiv.classList = 'card to-do-card'
 	cardHeaderDiv.classList = 'card-header'
 	cardBodyDiv.classList = 'card-body'
 	cardTitleH5.classList = 'card-title'
 	deleteButton.classList = 'btn btn-sm btn-danger'
-	serialNo.classList = 'serial-no'
+	// serialNo.classList = 'serial-no'
 
 	todoCardDiv.id = `to-do-card-${idCount}`
 
@@ -42,7 +41,7 @@ const createToDoDiv = (todoInput, todoPriorityInput, todoDeadline) => {
 	cardTitleH5.innerText = todoInput
 	deadlineDisplaySpan.innerText = todoDeadline
 	deleteButton.innerText = 'Delete'
-	serialNo.innerText = `${slNoCount}`
+	// serialNo.innerText = `${idCount}.`
 
 	switch(todoPriorityInput) {
 		case 'High':
@@ -63,7 +62,7 @@ const createToDoDiv = (todoInput, todoPriorityInput, todoDeadline) => {
     deleteButton.addEventListener('click', () => todoCardDiv.style.display = 'none')
     
 	todoCardDiv.appendChild(cardHeaderDiv)
-	cardHeaderDiv.appendChild(serialNo)
+	// cardHeaderDiv.appendChild(serialNo)
 	cardHeaderDiv.appendChild(priorityDisplaySpan)
 	cardHeaderDiv.appendChild(deadlineDisplaySpan)
 	todoCardDiv.appendChild(cardBodyDiv)
@@ -72,6 +71,5 @@ const createToDoDiv = (todoInput, todoPriorityInput, todoDeadline) => {
 
 	todoBlock.appendChild(todoCardDiv)
 
-	slNoCount++
 	idCount++
 }

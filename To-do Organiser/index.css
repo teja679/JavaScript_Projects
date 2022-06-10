@@ -32,11 +32,10 @@ body{
 	text-align: center;
 }
 .serial-no{
-	background-color: white;
-    width: 22px;
+	color: #111;
+    width: 15px;
     border-radius: 100%;
-    text-align: center;
-    margin-left: 0;
+	/* text-align: left; */
 }
 /* .main-btn-outer .btn-lg{
 	background-color: bisque;
@@ -59,8 +58,12 @@ body{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
-
+.card-header{
+	text-align: left;
+	
+}
 .to-do-card .card-title {
 	margin-bottom: 20px;
 }
