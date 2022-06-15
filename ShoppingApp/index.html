@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-		crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<link rel="icon"
 		href="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc"
 		sizes="32x32">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="index.css">
-	<title>Max's Shopping App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
+<body onload="fetchProducts()"> 
 
-<body onload="fetchProducts()">
-	<!-- ------------------------------------------ NAVBAR ------------------------------------------ -->
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="#">
-			<img src="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc" width="30" height="30" class="d-inline-block align-top" alt="">
+    <!-- ----------------------------Navbar-------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc" width="30" height="30" class="d-inline-block align-top" alt="">
 			Max's Shopping App
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#products">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#about-us">About Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#contact-us">Contact Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-						<span class="badge badge-pill badge-light" id="cart-items-length">0</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Sign Up</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Login</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact-us">Contact Us</a>
+            </li>
+            <li class="nav-item cart-nav-link">
+                <a class="nav-link" data-toggle="modal" data-target="#cartModal">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="badge badge-pill badge-light" id="cart-items-length">0</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
 
-	<!-- ------------------------------------------ JUMBOTRON ------------------------------------------ -->
-	<div class="jumbotron main-header-section">
-		<h1 class="display-1">
-			Welcome to<br>
-			<span class="brand-name">Max's</span><br>
-			Shopping App
-		</h1>
-		<p class="lead">The one stop destination for all your shopping needs! Be it from fashion to electronics, you get it all here!</p>
-		<hr>
-		<a class="btn btn-lg btn-primary" href="#products" role="button">Explore</a>
-		<br>
-		<img src='Assets/image.gif' class="jumbotron-img">
-	</div>
+      <!-- --------------------------Jumbotron------------------ -->
+    <div class="jumbotron main-header-section">
+        <h1 class="display-1">
+            Welcome to <br>
+            <span class="brand-name">Max's</span> <br>
+             Shopping App
+        </h1>
+        <p class="lead">The one stop destination for all your shopping needs! Be it from fashion to electronics, you get it all here!</p>
+        <hr>
+        <a class="btn btn-primary btn-lg" href="#products" role="button">Explore</a>
+        <br>
+        <img src='assets/image.gif  ' class="jumbotron-img">
+    </div>
+    <!-- --------------------------Products------------------------- -->
 
-	<!-- ------------------------------------------ PRODUCTS ------------------------------------------ -->
-	<div class="container">
-		<div class="row" id="products">
-			<div id="products-spinner" class="spinner-border text-light" role="status"></div>
-		</div>
-		<div id="about-us">
+    <div class="container">
+        <div class="row" id="products"> 
+            <div id="products-spinner" class="spinner-border text-light" role="status"></div>   
+        </div>
+        <div id="about-us">
 			<h1 class="display-3">
 				About us
 			</h1>
@@ -101,12 +95,31 @@
 			</h1>
 			<p class="lead">Email: max@shopping.com</h1>
 			<p class="lead">Contact No.: +91 1122112211</h1>
+		</div>  
+    </div>
+    <!----------------------------------- Modal ----------------------------------->
+	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				    <div class="modal-body" id="cart-items-body">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Continue to Buy</button>
+				</div>
+			</div>
 		</div>
-	</div>
-	<script src="js/index.js"></script>
-	<script src="js/createProduct.js"></script>
-	<script src="js/addToCart.js"></script>
-	<script src="js/misc.js"></script>
+	</div>      
+    <script src="js/addToCart.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/createItemsInCart.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/misc.js"></script>
 </body>
-
 </html>
