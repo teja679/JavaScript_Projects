@@ -9,7 +9,8 @@ const fetchProducts  =  async () => {
     globalProducts = data
     
     productSpinner.style.display = 'none'
-    data.forEach(product => createProductDiv(product))
+    data.forEach(product => createProductDiv(product))    
+    // console.log(product)
     // data.forEach(product => console.log(product))
 }       
 

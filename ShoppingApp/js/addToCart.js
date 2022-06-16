@@ -1,12 +1,13 @@
-const cartItemsLength  =  document.getElementById('cart-items-length')
-let cartItemsIds = []
+const cartItemsLength = document.getElementById('cart-items-length')
+let cartItemIds = []
 
 const addToCart = (id) =>  {
     // console.log(id)
-    cartItemsIds.push(id)
-    cartItemsLength.innerText = cartItemsIds.length
-    // console.log(cartItemsIds.length)
-    let cartItem = globalProducts.find(product => product.id = id)
-    // console.log(cartItem.id)
-    createItemsInCart(cartItem.id)
+    cartItemIds.push(id)
+    cartItemsLength.innerText = cartItemIds.length
+    // console.log(cartItemIds.length)
+    let cartItem = globalProducts.find(product => product.id == id)
+    // console.log(cartItem)
+    createItemsInCart(cartItem)
 }   
+

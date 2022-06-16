@@ -1,7 +1,6 @@
 const productsParentDiv = document.getElementById('products')
 
-const createProductDiv =  (product) => {
-	// console.log(product)				
+const createProductDiv = (product) => {
     const colDiv = document.createElement('div')
 	const productDiv = document.createElement('div')
 	const productImg = document.createElement('img')
@@ -37,8 +36,10 @@ const createProductDiv =  (product) => {
 	cardButtonOuter.classList = 'btn-outer'
 	addToCartButton.classList = 'btn btn-primary add-to-cart-btn'
 	buyButton.classList = 'btn btn-primary buy-btn'
-	// console.log(product.title.slice(0, 20))
-    productTitle.innerText = `${product.title.slice(0, 20)}...`
+
+	colDiv.id = `product-${product.id}`
+
+	productTitle.innerText = `${product.title.slice(0, 20)}...`
 	productPrice.innerText = `$${product.price}`
 	productDescription.innerText = `${product.description.slice(0, 50)}...`
 	ratingCount.innerText = `(${product.rating.count})`
@@ -70,8 +71,8 @@ const createProductDiv =  (product) => {
 	productsParentDiv.appendChild(colDiv)
 
     addToCartButton.addEventListener('click', function (){
-		// console.log(product)
-        addToCart(product)
+        addToCart(product.id)
         this.innerHTML  =  '<i class="fa fa-check-circle" aria-hidden="true"></i>'
-    }) 
+		this.classList.add('disabled')
+	}) 
 }

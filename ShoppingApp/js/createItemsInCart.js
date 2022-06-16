@@ -1,6 +1,9 @@
 let cartItemsBody = document.getElementById('cart-items-body')
+let cartEmptyImg = document.getElementById('cart-empty-img')
 
 const createItemsInCart = (cartItem) => {
+	// console.log(cartItem)	
+	cartEmptyImg.style.display = 'none'
 	const productDiv = document.createElement('div')
 	const cartItemRow = document.createElement('div')
 	const cartItemCol1 = document.createElement('div')
@@ -12,7 +15,7 @@ const createItemsInCart = (cartItem) => {
 	const productPrice = document.createElement('h5')
 	const cardButtonOuter = document.createElement('div')
 	const removeFromCart = document.createElement('a')
-
+	
 	productDiv.classList = 'card product'
 	cartItemRow.classList = 'row'
 	cartItemCol1.classList = 'col-md-6'
@@ -26,7 +29,6 @@ const createItemsInCart = (cartItem) => {
 	removeFromCart.classList = 'btn btn-primary buy-btn'
 
 	productDiv.id = `cart-item-${cartItem.id}`
-	// console.log(cartItem)	
 
 	productTitle.innerText = `${cartItem.title.slice(0, 20)}...`
 	productPrice.innerText = `$${cartItem.price}`
@@ -52,9 +54,16 @@ const createItemsInCart = (cartItem) => {
 		// console.log('Removing from cart ', cartItem.id)
 		cartItemsBody.removeChild(productDiv)
 		// console.log(cartItem.id)
-		cartItemsIds = cartItemsIds.filter(cartItemId => cartItemId != cartItem);
-		console.log(cartItem.id)
-		// console.log(cartItemsIds.length)
-		cartItemsLength.innerText = cartItemsIds.length	
-		})
-	}
+		cartItemIds = cartItemIds.filter(cartItemId => cartItemId != cartItem.id);
+		// console.log(cartItemIds.length)
+		cartItemsLength.innerText = cartItemIds.length	
+
+		if(cartItemIds.length === 0)
+			cartEmptyImg.style.display = 'inline-block'
+			let productColDiv = document.getElementById(`product-${cartItem.id}`)
+			let requiredAddToCartButton = productColDiv.getElementsByClassName('add-to-cart-btn')[0]
+			requiredAddToCartButton.innerHTML = '<i class="fa fa-cart-plus" aria-hidden="true"></i>'
+			requiredAddToCartButton.classList.remove('disabled')
+	})
+}
+	
