@@ -5,11 +5,12 @@ const fetchProducts  =  async () => {
     // const res = await fetch('https://fakestoreapi.com/products')  
     const res = await fetch('https://fakestoreapi.com/products') 
     const data = await res.json()
-    console.log(data)
+    // console.log(data)
     globalProducts = data
-
+    
     productSpinner.style.display = 'none'
     data.forEach(product => createProductDiv(product))
+    // data.forEach(product => console.log(product))
 }       
 
 mybutton = document.getElementById("myBtn");

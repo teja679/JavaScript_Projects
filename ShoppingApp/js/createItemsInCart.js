@@ -26,6 +26,7 @@ const createItemsInCart = (cartItem) => {
 	removeFromCart.classList = 'btn btn-primary buy-btn'
 
 	productDiv.id = `cart-item-${cartItem.id}`
+	// console.log(cartItem)	
 
 	productTitle.innerText = `${cartItem.title.slice(0, 20)}...`
 	productPrice.innerText = `$${cartItem.price}`
@@ -48,6 +49,12 @@ const createItemsInCart = (cartItem) => {
 	cartItemsBody.appendChild(productDiv)
 
 	removeFromCart.addEventListener('click', function () {
-		console.log('Removing from cart ', cartItem.id)
-	})
-}
+		// console.log('Removing from cart ', cartItem.id)
+		cartItemsBody.removeChild(productDiv)
+		// console.log(cartItem.id)
+		cartItemsIds = cartItemsIds.filter(cartItemId => cartItemId != cartItem);
+		console.log(cartItem.id)
+		// console.log(cartItemsIds.length)
+		cartItemsLength.innerText = cartItemsIds.length	
+		})
+	}
