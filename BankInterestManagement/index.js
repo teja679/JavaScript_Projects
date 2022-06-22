@@ -21,7 +21,7 @@ function calculateInterest(){
             temp *= (1 + 0.03)
             // temp = temp + temp * 0.03
         }
-        updatedValues[i].value = Math.round(temp)
+        updatedValues[i].value = Math.round(temp) && temp ? Math.round(temp) : ''
     }
 
 }

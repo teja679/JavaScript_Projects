@@ -38,6 +38,20 @@ const decode = (encodedstr) => {
 }
 const checkPwdStrength = () => {
    
+   if(signupInputPwdField.value.length < 5){
+        passwordStrength.style.display = 'block'
+        passwordStrength.innerText =  'Weak'
+        passwordStrength.style.color = 'red'
+   } else if(signupInputPwdField.value.length < 8){
+        passwordStrength.style.display = 'block'
+        passwordStrength.innerText =  'Moderate'
+        passwordStrength.style.color = 'yellow'
+   }
+   else{
+        passwordStrength.style.display = 'block'
+        passwordStrength.innerText =  'Strong'
+        passwordStrength.style.color = 'green'
+   }
     
 }
 const singUp = () => {

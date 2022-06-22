@@ -1,0 +1,75 @@
+body{
+    /* background-color: rgba(65, 170, 240, 0.623); */
+    /* display: flex; */
+    background: url(https://media.istockphoto.com/photos/fingerprint-login-authorization-and-cyber-security-concept-blue-picture-id963458556);
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+    p.valid{
+color: green;
+}
+
+h1{
+    border: 5px solid #2185c8;
+    padding: 5px;
+    text-align: center;
+    margin: 30px auto;
+    width: 30%;
+    background-color: rgb(210, 255, 255);
+    border-radius: 5px;
+    /* color: whitesmoke */
+}
+p.inValid{
+color: red;
+} 
+.body {
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+}
+#div1, #div2{
+    background-color: rgb(210, 255, 255);
+    border: 20px solid #2185c8;
+    padding: 50px 10px;
+    border-radius: 25px;
+    margin: 20px;
+    
+    /* filter: blur(2px); */
+}
+
+input {
+    width: 300px;
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-radius: 50px;
+    text-align: center;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(47, 90, 146);
+    border-radius: 15px;
+    border: solid rgb(47, 90, 146);
+}
+
+button:hover{
+    cursor: pointer;   
+     background-color: rgb(6, 59, 128);
+}
+
+p{
+    font-size: 1.2em;
+    margin-top: 0;
+    display: none;
+}

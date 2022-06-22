@@ -13,7 +13,8 @@
         <div class="title"><h1>Password Authentication</h1></div>
         <div class="body">  
             <div id="div1">
-                <input type="password" placeholder="Create password" id="signup-input">
+                <input type="password" placeholder="Create password" id="signup-input"  onkeyup="checkPwdStrength()">
+                <p id="password-strength"></p>
                 <p class="valid" id="signup-valid">Password saved successfully</p>
                 <p class="inValid" id="signup-invalid">Password must be at least 8 characters</p>
                 <button onclick="singUp()">Sign Up</button>
