@@ -18,6 +18,7 @@ let emailInvalid = emailFields.getElementsByClassName('invalid-feedback')[0]
 let passwordInvalid = passwordFields.getElementsByClassName('invalid-feedback')[0]
 
 const validate = (flag = false)  =>  {
+    let isValid = true  
     if(flag)
         globalFlag = flag
 
@@ -60,4 +61,23 @@ const validate = (flag = false)  =>  {
             passwordInvalid.style.display = 'none'
         }
     }
+    return isValid
+}
+
+const reset = () => {
+    firstNameFields = signUpForm.getElementsByClassName('form-fields')[0]
+    lastNameFields = signUpForm.getElementsByClassName('form-fields')[1]
+    emailFields = signUpForm.getElementsByClassName('form-fields')[2]
+    passwordFields = signUpForm.getElementsByClassName('form-fields')[3]
+    
+    firstNameValid.style.display = 'none'
+    lastNameValid.style.display = 'none'
+    emailValid.style.display = 'none'
+    passwordValid.style.display = 'none'
+    firstNameInvalid.style.display = 'none'
+    lastNameInvalid.style.display = 'none'
+    emailInvalid.style.display = 'none'
+    passwordInvalid.style.display = 'none'
+
+    globalFlag = false  
 }
