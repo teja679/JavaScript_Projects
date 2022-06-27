@@ -11,7 +11,7 @@ const login = () => {
 		let loginPassword = loginPasswordFields.getElementsByClassName('form-control')[0].value
 
         let psd = DB_USERS.forEach(e => (e.email === loginEmail) {
-            return e.password
+        
         })
 		
 	

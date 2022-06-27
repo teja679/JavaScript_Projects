@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(90deg, rgba(132,28,60,1) 0%, rgba(248,95,81,1) 100%);
+	background: linear-gradient(90deg, #1e81b0 0%, #25bce8 100%);
 }
 .navbar {
 	position: sticky;
@@ -9,22 +9,23 @@ body {
 }
 .main-header-section.jumbotron{
     text-align: center;
-    background-color: #fbe5d6;
+    background-color:#abdbe3;
 }
 .jumbotron--img{
     height: 300px;  
+	background-color: #abdbe3;
 }
 .brand-name {
-	background: linear-gradient(90deg, rgba(132,28,60,1) 0%, rgba(248,95,81,1) 100%);
+	background: linear-gradient(90deg, #1e81b0 0%, #25bce8 100%);
 	padding: 5px 30px;
 	border-radius: 60px;
-	color: #fbe5d6;
+	color: #abdbe3;
 }   
 .btn-primary {
-	background: linear-gradient(90deg, rgba(132,28,60,1) 0%, rgba(248,95,81,1) 100%);
+	background: linear-gradient(90deg, #1e81b0 0%, #25bce8 100%);
 }
 .navbar {
-	background-color: #fbe5d6;
+	background-color:#abdbe3;
 }
 .nav-link:hover{
     cursor: pointer;
@@ -88,7 +89,7 @@ body {
     margin-left: 5px;   
 }
 #about-us, #contact-us {
-	background-color: #fbe5d6;
+	background-color: #abdbe3;
 	text-align: center;
 	padding: 50px 20px;
 	border-radius: 10px;
