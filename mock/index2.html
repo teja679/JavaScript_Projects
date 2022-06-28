@@ -9,13 +9,14 @@
     <body onload="fetchProducts()">
         <div id="products-spinner">
            <ol>
-                <li id="1"></li>
-                <li id="2"></li>
-                <li id="3"></li>
-                <li id="4"></li>
-                <li id="5"></li>
-                <li id="6"></li>
-                <li id="7"></li>
+                <li id="id0"></li>
+                <li id="id1"></li>
+                <li id="id2"></li>
+                <li id="id3"></li>
+                <li id="id4"></li>
+                <li id="id5"></li>
+                <li id="id6"></li>
+                <li id="id7"></li>
            </ol>
           
         </div>
@@ -31,9 +32,9 @@
 
         globalProducts = data   
         let id = 1
-        for(let i=0; i<product.length; i++){
-            console.log(globalProducts[i])
-        }
+        data.forEach((product, index) => 
+            document.getElementById(`id${index++}`).innerText = product.email
+        )
             // console.log(product)
             // document.getElementById('1').innerHTML = 
             // document.getElementById('1').innerHTML +` <br> ${product.email}`
