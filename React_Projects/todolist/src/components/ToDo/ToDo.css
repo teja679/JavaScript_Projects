@@ -1,0 +1,7 @@
+.to-do-list{
+    text-align: left;
+}
+.action-btns{
+    display: flex;
+    justify-content: space-around;
+}
