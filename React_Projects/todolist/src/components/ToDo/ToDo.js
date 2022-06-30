@@ -4,6 +4,7 @@ import { FaEdit } from 'react-icons/fa';
 import { FiDelete } from 'react-icons/fi'
 import { MdOutlineBorderAll } from 'react-icons/md'
 import {AiOutlineCheckCircle } from 'react-icons/ai'
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 import './ToDo.css'
 
 class ToDo extends Component{
@@ -20,7 +21,7 @@ class ToDo extends Component{
 
   editToDo(inputindex) {
     this.setState((prevState) => ({
-      inputToDo : prevState.toDoList[inputindex],
+      inputToDo : prevState.toDoList[inputindex].text,
       isEditing : true,
       editingIndex : inputindex
     }))
@@ -33,15 +34,17 @@ class ToDo extends Component{
         this.setState((prevState) => ({
           toDoList : prevState.toDoList.map((todo, index) => {
             if(index === editingIndex)
-              todo = inputToDo
+              todo.text = inputToDo
               return todo
           }),
-          inputToDo : ''
+          inputToDo : '',
+          isEditing : false,
+          editingIndex : ''
         }))
       }
       else{
         this.setState((prevState) => ({
-          toDoList : [...prevState.toDoList, inputToDo],
+          toDoList : [...prevState.toDoList, {text:inputToDo, completed:false}],
           inputToDo : ''
         }))
       }
@@ -54,6 +57,15 @@ class ToDo extends Component{
     }))
   }
  
+  completedToDo(inputindex) {
+      this.setState((prevState) => ({
+        toDoList : prevState.toDoList.map((todo, index) => {
+          if(index === inputindex)
+          todo.completed = true
+          return todo
+        })
+      }))
+  }
   render(){
     const { toDoList, inputToDo, isEditing } = this.state
     return(
@@ -62,11 +74,13 @@ class ToDo extends Component{
           <InputGroup className="mb-3">
             <Form.Control 
               size="lg" 
+              className='to-do-input'
               type="text" 
               placeholder="Enter To-Do"
               value={inputToDo}
               onChange={(e) => this.setState ({inputToDo : e.target.value})} />
-            <Button 
+            <Button               
+            className='to-do-input-btn'
             variant="outline-dark" 
             id="button-addon2"
             onClick={() => this.addOrUpdateToDo()}
@@ -76,12 +90,17 @@ class ToDo extends Component{
               {toDoList.map((toDo, index) => (
                 <ListGroup.Item size='sm'>
                 <Row>
-                  <Col md={9}> {toDo} </Col>
-                  <Col md={3} className="action-btns">
-                    <Button variant="warning" id="button-addon2" size='sm'
-                      onClick={() => this.editToDo(index)}><FaEdit /> </Button>
-                    <Button variant="danger" id="button-addon2" size='sm' 
-                      onClick={() => this.deleteToDo(index)}><FiDelete /></Button>
+                  <Col xs={9} className={toDo.completed && "completed"}> {toDo.text} </Col>
+                  <Col xs={3} className="action-btns">
+                  <Button variant="success" id="button-addon2" size='sm' 
+                      onClick={() => this.completedToDo(index)}
+                      ><BsFillCheckCircleFill /></Button>
+                    <Button variant="warning" className={toDo.completed && 'btn1'} id="button-addon2" size='sm'
+                      onClick={() => this.editToDo(index)}  disabled={toDo.completed}><FaEdit /> </Button>
+                    <Button variant="danger" id="btn1 button-addon2" size='sm' 
+                      onClick={() => this.deleteToDo(index)}
+                      disabled={toDo.completed}
+                      ><FiDelete /></Button>
                   </Col>
                 </Row>
               </ListGroup.Item>
