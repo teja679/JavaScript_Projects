@@ -1,14 +1,21 @@
 import './App.css';
-import Photo from './components/Photo'
+import About from './components/About';
+import Photo from './components/Photo/Photo'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComponent from './components/Navbar';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <NavbarComponent />
-      <Photo />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Photo />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
