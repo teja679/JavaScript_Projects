@@ -1,7 +1,13 @@
 import {useState , useEffect} from 'react'
-import {Card, Button, Col, Row, Container, Spinner} from 'react-bootstrap'
+import {Card, Button, Col, Row, Container, Spinner, Badge} from 'react-bootstrap'
 import axios from 'axios'
 import './Post.css'
+import {BiLike} from 'react-icons/bi'
+import {GoComment} from 'react-icons/go'
+import { FaUserCircle } from 'react-icons/fa'
+import dummyPostText from '../../assets/dummyPostText.json'
+import dummyPostTime from '../../assets/dummyPostTime.json'
+
 
 const Post = () => {
   const [photos, setPhotos] = useState([])
@@ -20,16 +26,33 @@ const Post = () => {
 
   return(
     <div>
-      <Container>
+      <Container className='post-container'>
         <Row>
           {photos.length ?
           (photos.map((photo) => (
-            <Col key={photo.id} md={3} className='single-photo'>
-              <Card style={{ width: '18rem' }}>
-              <Card.Header>{photo.author}</Card.Header>
+            <Col key={photo.id} md={12} className='single-photo'>
+              <Card style={{ width: '18rem', marginTop: '5px' }}>
+              <Card.Header className='post-header'>
+                <div>
+                  <FaUserCircle/>{' '}{photo.author}{' '}
+                </div>
+                <p className='post-time'> {dummyPostTime[Math.ceil(Math.random()*7)]}</p>
+              </Card.Header>
               <Card.Img variant="top" src={photo.download_url} className='photo-img'/>
               <Card.Body>
-                <a className='btn btn-dark' href={photo.url}>view source</a>
+              {dummyPostText[Math.ceil(Math.random()*4)]}
+                <Row>
+                  <Col className='action-btn-outer' md={{span:7, offset:3}} >
+                    <Button className='btns' variant='light'>
+                      <BiLike />{' '}
+                      <Badge pill bg="dark">125</Badge>
+                    </Button>
+                    <Button className='btns' variant='light'>
+                      <GoComment />{' '}
+                      <Badge pill bg="dark">56</Badge>
+                    </Button>
+                  </Col>
+                </Row>
               </Card.Body>
               </Card>
             </Col>

@@ -1,5 +1,5 @@
 import React from 'react'
-import photoLogo from "../assets/photo.png"
+import icon from '../assets/icon.png'
 import {Navbar, Nav, Container} from 'react-bootstrap'
 
 function NavbarComponent() {
@@ -8,13 +8,13 @@ function NavbarComponent() {
         <Container>
         <Navbar.Brand href="#home">
         <img
-            src={photoLogo}
+            src={icon}
             width="30"
             height="30"
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
         />{' '}
-            Photo App
+            Social App
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
