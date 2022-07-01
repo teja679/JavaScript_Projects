@@ -7,3 +7,7 @@
 .spinner{
     margin: 20px 0;
 }
+.photo-wrapper{
+    display: flex;
+    justify-content: space-around;
+}

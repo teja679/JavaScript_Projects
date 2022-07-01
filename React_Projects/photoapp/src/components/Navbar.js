@@ -1,6 +1,7 @@
 import React from 'react'
 import photoLogo from "../assets/photo.png"
 import {Navbar, Nav, Container} from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 function NavbarComponent() {
   return (
@@ -19,9 +20,9 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link href="#features">Photos</Nav.Link>
-            <Nav.Link>About Us</Nav.Link>
-            <Nav.Link>Contact Us</Nav.Link>
+            <Nav.Link as={NavLink} to='/'>Photos</Nav.Link>
+            <Nav.Link as={NavLink} to='/about'>About Us</Nav.Link>
+            <Nav.Link as={NavLink} to='/contact'>Contact Us</Nav.Link>
             </Nav>
             <Nav>
             <Nav.Link>Sign Up</Nav.Link>

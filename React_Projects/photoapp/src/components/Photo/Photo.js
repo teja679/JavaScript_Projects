@@ -2,6 +2,7 @@ import {useState , useEffect} from 'react'
 import {Card, Button, Col, Row, Container, Spinner} from 'react-bootstrap'
 import axios from 'axios'
 import './Photo.css'
+// import { Link } from 'react-router-dom'
 
 const Photo = () => {
   const [photos, setPhotos] = useState([])
@@ -28,8 +29,9 @@ const Photo = () => {
               <Card style={{ width: '18rem' }}>
               <Card.Header>{photo.author}</Card.Header>
               <Card.Img variant="top" src={photo.download_url} className='photo-img'/>
-              <Card.Body>
+              <Card.Body className='photo-wrapper'>
                 <a className='btn btn-dark' href={photo.url}>view source</a>
+                <a className='btn btn-dark' href={photo.download_url}>view Enlarge</a>
               </Card.Body>
               </Card>
             </Col>
