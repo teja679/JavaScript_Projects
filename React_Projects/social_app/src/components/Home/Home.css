@@ -1,16 +1,20 @@
 .single-photo{
-    margin: 10px 0;
+    margin-bottom: 20px;
+    /* margin: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
+}
+.btns{
+    display: flex;
 }
 .photo-img{
     height: 220px;
 }
 .post-container{
-    width: 400px;
+    margin-top: 10px;
 }
 .spinner{
-    margin: 20px 0;
+    margin: 50px 0;
 }
 .post-header{
     text-align: left;
@@ -19,13 +23,21 @@
     justify-content: space-between;
 }
 .action-btn-outer{
+    text-align: right;
     display: flex;
     justify-content: space-around;
+}
+.action-btn-outer .btn{
+    margin-left: 10px;
 }
 .post-time{
     margin-bottom: 0;
     opacity: 0.6;
 }
-.btns{
+.btn-inner{
     display: flex;
+    justify-content: space-around;
+}
+.chat-list-item .member-list-item{
+    text-align: left;
 }
