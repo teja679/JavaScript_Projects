@@ -38,6 +38,6 @@
     display: flex;
     justify-content: space-around;
 }
-.chat-list-item .member-list-item{
+.chat-list-item, .member-list-item, .post-author{
     text-align: left;
 }

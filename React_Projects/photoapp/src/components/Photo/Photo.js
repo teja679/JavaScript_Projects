@@ -1,5 +1,6 @@
 import {useState , useEffect} from 'react'
-import {Card, Button, Col, Row, Container, Spinner} from 'react-bootstrap'
+import {Card,  Col, Row, Container, Spinner} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import './Photo.css'
 // import { Link } from 'react-router-dom'
@@ -26,12 +27,12 @@ const Photo = () => {
           {photos.length ?
           (photos.map((photo) => (
             <Col key={photo.id} md={3} className='single-photo'>
-              <Card style={{ width: '18rem' }}>
+              <Card>
               <Card.Header>{photo.author}</Card.Header>
               <Card.Img variant="top" src={photo.download_url} className='photo-img'/>
               <Card.Body className='photo-wrapper'>
                 <a className='btn btn-dark' href={photo.url}>view source</a>
-                <a className='btn btn-dark' href={photo.download_url}>view Enlarge</a>
+                <Link className='btn btn-dark' to={`/photos/${photo.id}`}>view Enlarge</Link>
               </Card.Body>
               </Card>
             </Col>

@@ -14,9 +14,11 @@ const MemberActiveStatusList = ({posts}) => {
             <div className="ms-2 me-auto">
               <div className="fw-bold"><FaUserCircle />{' '}{post.author}</div>
             </div>
-            <Badge bg="success" pill>
+            {Math.ceil(Math.random()*2) % 2 === 0 ? (<Badge bg="success" pill>
               Active
-            </Badge>
+            </Badge>) :  (<Badge bg="secondary" pill>
+              Not Active
+            </Badge>)}
           </ListGroup.Item>
         ))}
 

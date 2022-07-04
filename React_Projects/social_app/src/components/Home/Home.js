@@ -6,6 +6,8 @@ import dummyPostTime from '../../assets/dummyPostTime.json'
 import MemberActiveStatusList from './MemberActiveStatusList'
 import Post from './Post'
 import ChatList from './ChatList'
+import dummyChatText from '../../assets/dummyChatText.json'
+
 
 
 const Home = () => {
@@ -34,7 +36,11 @@ const Home = () => {
     getPosts()
   }, [])  // [] dependency array
 
-  let randomPost = posts.filter(post => Number(post.id) % 5 === 0)
+  let randomChatList = posts.filter(post => Number(post.id) % 5 === 0)
+    .map((post) => {
+      post.chat = dummyChatText[Math.ceil(Math.random() * 5)]
+      return post
+    })
 
   return (
     <div>
@@ -42,7 +48,7 @@ const Home = () => {
         <Row>
           <MemberActiveStatusList posts={posts} />
          <Post posts={posts} setPosts={setPosts}/>
-          <ChatList posts={randomPost} />
+          <ChatList posts={randomChatList} />
         </Row>
       </Container>
     </div>

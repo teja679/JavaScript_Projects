@@ -1,10 +1,31 @@
 {
-    "1":"Hello",
-    "2": "Hey this is teja",
-    "3":"Nice to see you again",
-    "4":"it's time to party",
-    "5": "Hello guys!",
-    "6": "Good morning friends",
-    "7": "Waiting for your reply"
+    "1": {
+        "message" : "Hello Buddy",
+        "messageCount" : 1
+        },
+    "2": {
+        "message" :"Hey! How are you doing",
+        "messageCount" : 4
+        },
+    "3": {
+        "message" : "Nice to see you again",
+        "messageCount" : 5
+        },
+    "4": {
+        "message" : "it's time to party",
+        "messageCount" : 1
+        },
+    "5": {
+        "message" : "Hello guys!",
+        "messageCount" : 6
+        },
+    "6": {
+        "message" : "Good morning friends",
+        "messageCount" : 3
+        },
+    "7": {
+        "message" : "Waiting for your reply",
+        "messageCount" : 2
+        }
 }
 
