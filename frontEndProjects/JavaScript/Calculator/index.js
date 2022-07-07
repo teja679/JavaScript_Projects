@@ -50,8 +50,9 @@ const buttonClicked = (buttonText) => {
 			}
 			return
 		}
-
+		else{
 			displayArea.innerText += buttonText
-		return
+			return
+		}
 	}
 }
