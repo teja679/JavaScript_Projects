@@ -1,0 +1,19 @@
+.welcome-page{
+    background-color: rgb(140, 211, 144);
+    height: 100vh;
+    display: flex;
+}
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.home{
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+p{
+    margin: 0;
+}
