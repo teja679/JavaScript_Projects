@@ -15,7 +15,7 @@ const buttonClicked = (buttonText) => {
 		return
 	}
 	if (buttonText === 'DEL') {
-		displayArea.innerText = displayArea.innerText.slice(0, -1)
+		displayArea.innerText == '0' ? 0 : displayArea.innerText.slice(0, -1)
 		return
 	}
 	if (buttonText === '=') {
