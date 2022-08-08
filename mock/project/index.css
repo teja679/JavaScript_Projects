@@ -1,0 +1,50 @@
+.container{
+    width: 80%;
+    height: 100rem;
+    /* margin: 20px; */
+    /* background-color: black; */
+    /* border: 1px solid black; */
+    margin: auto;
+}
+
+.box1, .box2, .box3{
+    border: 1px solid black;
+    height: 33%;
+    display: flex;
+}
+
+.col1{
+    display: inline;
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid black; */
+    background-color: yellow;
+    display: flex;
+}
+.col2{
+    /* background-color: aqua; */
+    width: 80%;
+    height: 100%;
+}
+
+p{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45%;
+}
+.ball{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    position: sticky;
+}
+
+.ball-fixed{
+    position: fixed;
+}

@@ -53,15 +53,14 @@ const checkWinningStatus = () => {
     for(let i=0; i< winningCombinations.length; i++){
         combination = winningCombinations[i]
         let value = grids[combination[0]].innerText 
-        console.log("3536633")
-        if(combination.every(index => grids[index].innerText && grids[index].innerText === value)){       addBorderStyle(combination)
-            console.log("3536634")
+        if(combination.every(index => grids[index].innerText && grids[index].innerText === value)){       
+            addBorderStyle(combination)
             return value ==='X' ? 1 : 2
         }
     }
     return 'No Winner'
 }
 const addBorderStyle = (indexArray) => {
-    indexArray.forEach(index => grids[index].style.cssText = 'background-color: rgba(247, 191, 129, 1)');
+    indexArray.forEach(index => grids[index].style.cssText = 'color: #054741');
 }
 

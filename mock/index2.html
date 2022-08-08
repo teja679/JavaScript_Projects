@@ -22,15 +22,15 @@
         </div>
 
     <script>
-        let globalProducts = []
-        const productSpinner = document.getElementById('products-spinner')
+        // let globalProducts = []
+        // const productSpinner = document.getElementById('products-spinner')
 
         const fetchProducts  =  async () => {
 
         const res = await fetch('https://jsonplaceholder.typicode.com/users') 
         const data = await res.json()
 
-        globalProducts = data   
+        // globalProducts = data   
         let id = 1
         data.forEach((product, index) => 
             document.getElementById(`id${index++}`).innerText = product.email
