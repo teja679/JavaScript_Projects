@@ -15,7 +15,13 @@ button{
     border-radius: 25px;
     cursor: pointer;
 }
-/*
+.box{
+    position: relative;
+    border-radius: 50%;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
 #winner{
     color: green;
 }
@@ -27,11 +33,3 @@ button{
 .results{
     font-weight: bold;
 }
-
-.box{
-    position: relative;
-    border-radius: 50%;
-    background-color: red;
-    width: 100px;
-    height: 100px;
-}*/
