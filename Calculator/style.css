@@ -1,0 +1,50 @@
+/* body{
+    background-color: aqua;
+} */
+body{
+    background-image: url(https://cutewallpaper.org/21/calculator-background/Best-61-Calculator-Background-on-HipWallpaper-Calculator-.jpg);
+  }
+.container{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+    background-color: rgb(95, 93, 93);
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* border: 1px solid black;
+    padding: 20px; */
+}
+.button{
+    border: 1px solid black;
+    line-height: 80px;
+    background-color: #f3f7ee;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 10px;
+}
+.button:hover{
+    cursor: pointer;
+    font-size: 40px;
+}
+#display{
+    font-family: 'Orbitron', sans-serif;
+    margin: 5px;
+    padding: 0 5px;
+    line-height: 80px;
+    height: 80px;
+    background-color: #c2ddda;
+    text-align: right;
+    font-size: 35px;
+    border: 1px solid black;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}

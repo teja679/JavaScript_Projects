@@ -1,0 +1,77 @@
+body{
+  /* background-image: url(https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000); */
+  /* background-color: #04f36880; */
+  background-color: #fcc205;
+}
+.container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 20px;
+  }
+  .title{
+    width: 400px;
+    text-align: center;
+    top: 50px;
+    color: #DA8F02;
+    font-size: 2.5em;
+    border: solid 1px #fcc205;
+    font-size: large;
+    background-color: #111;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  .bank-balance-display table {
+    border: 2px solid black;
+  }
+  
+  table, tr, th, td{
+    border: 0.05px solid #fcc205;
+    color: #DA8F02;
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  table {
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  td, th{
+    padding: 20px;
+    /* background-color: #fff; */
+  }
+  
+  td input{
+    background-color: #fcc205;
+    width: 75%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .bank-balance-display button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  } 
+  #btn{
+    border: #fcc205;
+    color: #A16427;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 1.2em;
+  }
+ .input-balance, .updated-balance{
+    text-align: center;
+  } 

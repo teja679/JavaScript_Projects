@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(189, 227, 252);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+/* #top{
+    display: ;
+    text-align: center;
+    border: solid;
+} */
+.panel{
+    position: relative;
+    height: 80vh;
+    flex: 0.5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 2px;
+    transition: all 700ms ease-in;
+}
+.panel.active{
+    flex: 8;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 300ms ease-in 400ms;
+  }
+  
+.panel h3{
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 300ms ease-in 400ms;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#panel-1{
+    background-image:url("https://cdn.wallpapersafari.com/54/16/0jCZ7x.jpg");    
+}
+#panel-2{
+    background-image:url("https://c4.wallpaperflare.com/wallpaper/121/626/428/yamaha-fz-10-sportbike-best-bikes-wallpaper-preview.jpg");    
+}
+#panel-3{
+    background-image:url("https://c8.alamy.com/zooms/9/a00b586e28584f9c9abee34dcc6c543a/e0jbr6.jpg");    
+}
+#panel-4{
+    background-image:url("https://ic1.maxabout.us/autos/tw_india//D/2021/3/dhoom-3-bike-bmw-k1300r.jpg");    
+}
+#panel-5{
+    background-image:url("https://bd.gaadicdn.com/processedimages/suzuki/hayabusa/640X309/hayabusa614d56bddfc73.jpg");    
+}

@@ -1,0 +1,23 @@
+/* *{
+    margin: 0;
+} */
+body{
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+
+    justify-content: end;
+}
+.left{
+    margin: 10px solid green;
+    width: 30%;
+    background-color: aqua;
+}
+.right{
+    width: 120%;
+    background-color: blueviolet;
+}

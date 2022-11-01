@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Interest Management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="title"><h2>Bank Interest Management</h2></div>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Account Holder Name</th>
+                <th>Current Account Balance</th>
+                <th>Balance after Interest</th>
+            </tr>
+            <tr>
+                <td>Janu</td>
+                <td><input type="number" class="input-balance"></td>
+                <td><input type="number" class="updated-balance" disabled></td>
+            </tr>
+            <tr>
+                <td>Durga</td>
+                <td><input type="number" class="input-balance"></td>
+                <td><input type="number" class="updated-balance" disabled></td>
+            </tr>
+            <tr>
+                <td>Raju</td>
+                <td><input type="number" class="input-balance"></td>
+                <td><input type="number" class="updated-balance" disabled></td>
+            </tr>
+            <tr>
+                <td>Mani</td>
+                <td><input type="number" class="input-balance"></td>
+                <td><input type="number" class="updated-balance" disabled></td>
+            </tr>
+        </table> <br>
+        <button id="btn"onclick="calculateInterest()">Calculate Interest</button>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

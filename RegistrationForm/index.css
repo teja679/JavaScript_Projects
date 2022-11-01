@@ -1,0 +1,13 @@
+.registration-form{
+    width: 80%;
+    margin: 10% auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 25px;
+  } 
+.container{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #9933ff 5%, #66ccff 93%);
+  background-size: cover; 
+}
